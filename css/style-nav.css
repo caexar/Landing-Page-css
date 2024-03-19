@@ -1,0 +1,76 @@
+/*navbar*/
+#nav{ 
+    position: fixed; /* Establece la posición fija del elemento en la ventana
+                         del navegador */
+    top: 0px; /* Coloca el elemento en la parte superior de la ventana */
+    left: 0px; /* Coloca el elemento en la esquina superior izquierda de la ventana */
+    width: 100%; /* Establece que se ocupe el ancho completo de la ventana */
+    animation: blur linear both; /* Aplica una animación de desenfoque con efecto lineal
+                                    y aplica tanto a la entrada como a la salida */
+    animation-timeline: scroll(); /* Asigna la animación a la línea de tiempo de desplazamiento */
+    animation-range: 0 500px; /* Define el rango de la animación de desplazamiento */
+    z-index: 50; /* Establece el índice z del elemento, determinando su posición apilada en el eje z */
+}
+
+.cont-nav{
+    max-width: 1152px;/* Establece el ancho máximo del contenedor de navegación */
+    margin: 0px auto; /* Centra el contenedor horizontalmente dentro de su contenedor padre */
+    padding: 20px 20px;  /* Agrega relleno al contenedor 
+                        (20px arriba y abajo, 20px a la izquierda y derecha) */
+    display: flex;       /* Convierte el contenedor en un contenedor flexible O responsive */
+    justify-content: space-between; /*justifica el contenido en todo el eespacio*/
+    align-items: center; /* alinea en el centro el contenido verticalmente*/
+}
+
+/*esta parte cuando este en pequeño*/
+
+.cont-nav h3{  /*el h3 del header*/
+    font-size: 14px; /* tamaño de la fuentes */
+    font-weight: 700; /*grosor de la fuente*/
+}
+
+.links{
+    display: none; /* Oculta el elemento con la clase .links */
+}
+
+/*imagen que reemplaza los links*/
+.cont-nav img{
+    display: block; /* Establece que las imágenes dentro de .cont-nav
+                 se muestren como elementos de bloque */
+}
+
+.links-movile{
+    display: none; /* Oculta el elemento de la clase links movile */
+}
+
+/*esta parte cuando este en grande*/
+/*indica que los estilos dentro de este bloque de medios 
+se aplicarán cuando el ancho de la ventana sea igual o mayor a 1024 píxeles.*/
+@media(min-width: 1024px) {
+    .cont-nav{ 
+        padding: 20px 0px; /* Cambia el relleno del contenedor de navegación */
+    }
+
+    .cont-nav h3{
+        font-size: 20px;/* Cambia el tamaño de la fuente
+                         de los elementos h3 dentro del contenedor de navegación */
+        text-transform: uppercase; /*los h3 cambiaran a todo mayusculas*/
+    }
+
+    .links{
+        display: block; /* Muestra el elemento con la clase .links */
+    }
+    
+    .cont-nav img{
+        display: none; /* Oculta las imágenes dentro del contenedor de navegación */
+    }
+}
+
+/*se usa para definir una animación llamada blur que aplicará 
+    un desenfoque progresivo a un elemento en la página cuando estemos bajando*/
+@keyframes blur{
+    to{
+        box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        backdrop-filter: blur(15px);
+    }
+}

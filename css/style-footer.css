@@ -1,0 +1,43 @@
+/* Estilos para el pie de página */
+#footer{
+    max-width: 1152px;/* Establece el ancho máximo del pie de página */
+    margin: 30px auto;/* Centra el pie de página horizontalmente y 
+                        agrega un margen superior e inferior de 30px */
+    display: grid;/* Utiliza un diseño de cuadrícula para organizar los elementos secundarios */
+    grid-template-columns: repeat(1, minmax(0, 1fr));  /* Define una sola columna en la cuadrícula */
+    gap: 72px; /* Espacio entre los elementos secundarios de 72px */
+}
+/* Estilos para el menú dentro del pie de página */
+.menu{
+    display: flex;/* Muestra los elementos secundarios del menú en una fila */
+    justify-content: center; /* Centra los elementos del menú horizontalmente */
+    align-items: center; /* Centra los elementos del menú verticalmente */
+}
+/* Estilos para los elementos secundarios del menú */
+.menu .column{
+    gap: 24px; /* Espacio entre los elementos secundarios */
+}
+/* Estilos para los títulos del menú */
+.menu .title{
+    font-size: 18px;/* Tamaño de fuente de 18px */
+    font-weight: 700;  /* Peso de fuente */
+}
+/* Estilos para los enlaces y texto dentro del menú */
+.menu a, span{
+    font-size: 16px;/* Tamaño de fuente de 16px */
+    font-weight: 300;/* Peso de fuente normal */
+    cursor: pointer;/* Cambia el cursor a un puntero cuando se pasa sobre los enlaces */
+}
+/* Anula el cursor de puntero para los elementos de texto que no son enlaces */
+.menu span{cursor: auto;}
+/* Estilos al pasar el cursor sobre los enlaces del menú */
+.menu a:hover{
+    text-decoration: underline;/* Subraya los enlaces al pasar el cursor sobre ellos */
+}
+/* Media query para pantallas grandes */
+@media(min-width: 1024px) {
+    #footer{
+        grid-template-columns: repeat(4, minmax(0, 1fr));  /* Cambia la cuadrícula a cuatro columnas */
+        gap: 0px;  /* Elimina el espacio entre los elementos secundarios */
+    }
+}

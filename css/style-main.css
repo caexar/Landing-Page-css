@@ -1,0 +1,93 @@
+/* Estilos para el contenedor principal */
+#main{
+    max-width: 1152px;/* Establece el ancho máximo del contenedor principal */
+    margin: 0px auto; /* Centra el contenedor horizontalmente en la página */
+    padding: 120px 20px; /* Añade relleno alrededor del contenido del contenedor principal */
+    display: flex; /* Convierte el contenedor en un contenedor flexible */
+    flex-direction: column; /* Establece la dirección principal como columna */
+    gap: var(--screen-mov);  /* Establece el espacio entre los elementos hijos del contenedor */
+}
+
+#sec-2{ 
+    display: flex; /* Convierte la sección en un contenedor flexible */
+    flex-direction: column; /* Establece la dirección principal como columna */
+    gap: 40px; /* Establece el espacio entre los elementos hijos de la sección */
+}
+
+#sec-2 p{
+    color: #667085; /* Establece el color del texto para los párrafos dentro de la sección 2 */
+    text-align: center; /* Centra el texto dentro de los párrafos */
+    font-size: 14px;/* tamañp de la fuente*/
+}
+
+.companies{
+    display: grid;/* Convierte el contenedor en una cuadrícula */
+    grid-template-columns: repeat(4, minmax(0, 1fr)); /* Establece las columnas de la cuadrícula */
+}
+
+.company{
+    display: flex;/* Convierte el contenedor flexible */
+    justify-content: center;/*Centra horizontalmente los elementos dentro del contenedor*/
+    align-items: center; /*Centra verticalmente los elementos dentro del contenedor*/
+}
+
+.company img{
+    width: 60px;/* Establece el ancho de las imágenes de la empresa */
+}
+
+#sec-5 img{
+    display: none;/* Oculta las imágenes dentro de la sección 5 */
+}
+
+/* Media query para dispositivos de pantalla grandes */
+@media(min-width: 1024px) {
+    /* Ajusta el relleno del contenedor principal para pantallas grandes */
+     /* Ajusta el espacio entre los elementos hijos del contenedor principal para pantallas grandes */
+    #main{padding: 150px 0px; gap: var(--screen-desk);}
+
+    #sec-1{
+        /* Cambia la dirección principal de la sección 1 a fila para pantallas grandes */
+        flex-direction: row;
+        gap: 0px; /* Elimina el espacio entre los elementos hijos de la sección 1 para pantallas grandes */
+        margin-bottom: 50px; /* Añade margen inferior a la sección 1 para pantallas grandes */
+    }
+
+    #sec-2{
+        gap: 20px;/* Ajusta el espacio entre los elementos hijos de la sección 2 para pantallas grandes */
+    }
+
+    #sec-2 p{
+        color: #CFDCED;/* Cambia el color del texto para los párrafos
+                             dentro de la sección 2 para pantallas grandes */
+        font-size: 16px;/*tamaño de la fuente*/
+    }
+
+    .company img{
+        width: auto;/*anchura  */
+    }
+
+    #sec-3, #sec-5{
+        flex-direction: row-reverse;/* Cambia la dirección principal de las secciones 
+                                    3 y 5 a fila inversa para pantallas grandes */
+        justify-content: space-between;/* Distribuye uniformemente los elementos 
+                                        a lo largo del eje principal para pantallas grandes */
+        gap: 0px;/* Elimina el espacio entre los elementos hijos 
+                    de las secciones 3 y 5 para pantallas grandes */
+    }
+
+    #sec-3 .column, #sec-4 .column, #sec-5 .column{
+        width: 40%; /* Establece el ancho de las columnas dentro de las secciones 3, 4 y 5 para pantallas grandes */
+    }
+
+    #sec-4{
+        flex-direction: row;/* Cambia la dirección principal de la sección 4 a fila para pantallas grandes */
+        justify-content: space-between;  /* Distribuye uniformemente los elementos a lo largo del eje principal 
+                                            dentro de la sección 4 para pantallas grandes */
+        gap: 0px;/*Elimina el espacio entre los elementos hijos */
+    }
+
+    #sec-5 img{
+        display: block;/*deben mostrarse como bloques*/
+    }
+}
+

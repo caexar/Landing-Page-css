@@ -1,0 +1,76 @@
+/* use */
+html {
+    font-family: 'Poppins', sans-serif !important; /* Se establece la fuente para todo el documento, 
+                                                priorizando Poppins y luego fuentes genéricas sans-serif */
+    scroll-behavior: smooth; /* Establece el desplazamiento suave */
+
+    /*se quita el margen y el relleno predeterminado*/
+    margin: 0px; 
+    padding: 0px;
+
+    /* Colors */ /* Define una variable para el color negro, gris, blanco y azul */
+    --black: #1F242D;
+    --gray: #272D38;
+    --white: #FFFFFF;
+    --blue: #8EADD5;
+
+    /* Gap */ /* Define una variable para el espacio de pantalla en dispositivos móviles
+                                                      escritorio, medianos y pequeños */
+    --screen-mov: 180px;
+    --screen-desk: 100px;
+    --small: 40px;
+    --medium: 60px;
+}
+
+body{
+    background-color: var(--blue); /*fondo azul en el body*/
+
+    margin: 0px;/*margen y relleno se quita el predeterminado*/
+    padding: 0px;
+}
+
+/* Size Fonts */
+h1, h2, h3, a, p, span {
+    margin: 0px; /*se quita el margen predeterminado de los elementos*/
+    color: var(--black);  /* Establece el color del texto utilizando la variable de color negro */
+}
+
+/* Titles */
+h1 {
+    font-size: 40px; /*fuente del h1*/
+
+    line-height: 40px; /* Establece la altura de línea de los elementos h1 */
+    font-weight: 700; /* Establece el grosor de los elementos h1 */
+}
+
+/* Subtitles */
+h2 {
+    font-size: 32px;/*fuente del h2*/
+    line-height: 32px;/* Establece la altura de línea de los elementos h2 */
+    font-weight: 700; /* Establece el grosor de los elementos h2 */
+}
+
+/* paragraphs */
+p {
+    font-size: 18px; /*fuente del p*/
+    line-height: 18px; /*Establece la altura de línea de los elementos p*/
+    font-weight: 300; /* Establece el grosor de los elementos p */
+}
+
+/* Links */
+a{
+    text-decoration: none; /*se quita la decoracion de los elementos a*/
+}
+
+/*cuando la pantalla sea mayor a 1024px se ajusta el estilo*/
+@media(min-width: 1024px) {
+    h1 {
+        font-size: 64px;  /*fuente del h1*/
+        line-height: 64px; /* Establece la altura de línea de los elementos h1 */
+    }
+
+    h2 {
+        font-size: 48px; /*fuente del h2*/
+        line-height: 48px; /* Establece la altura de línea de los elementos h2 */
+    }
+}

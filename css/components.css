@@ -1,0 +1,79 @@
+/*estilo de los enlaces*/
+.link{
+    font-size: 18px;/* Tamaño de fuente para los enlaces */
+    color: var(--black);/* Color del texto para los enlaces utilizando una variable */
+    text-decoration: none; /*se le quita la decoracion por defecto*/
+    cursor: pointer; /*se activa el puntero cuando ese encima*/
+    padding: 5px 14px; /*relleno*/
+}
+/* Efecto hover para enlaces */
+.link:hover{
+    text-decoration: underline;/* Subraya el texto de los enlaces cuando pasa el cursor sobre ellos */
+    transition: all 0.5s;/* Agrega una transición suave para el cambio de estilo */
+}
+/* Estilo para botones */
+.btn{
+    background-color: var(--gray);/* Color de fondo para los botones utilizando una variable */
+    text-transform: uppercase; /* Transforma el texto del botón a mayúsculas */
+    text-align: center;  /* Alinea el texto en el centro del botón */
+    text-decoration: none; /* Quita la decoración de subrayado del botón */
+    color: var(--white); /*color letra con variable*/
+    font-size: 14px; /*fuente de letra*/
+    font-weight: 600;/*fuente de grosor*/
+    padding: 10px 30px; /*relleno*/
+    border-radius: 8px; /*borde*/
+    border: none;/* Quita el borde de los botones */
+    outline: none; /* Quita el contorno alrededor de los botones */
+    cursor: pointer; /* Cambia el cursor al puntero cuando pasa sobre el botón */
+}
+/* Efecto hover para botones */
+.btn:hover{
+    background-color: var(--black); /* Cambia el color de fondo de los botones 
+                                        cuando se pasa el cursor sobre ellos */
+}
+/* Estilo para secciones */
+/*aqui esta la sec 1*/
+.section{
+    display: flex; /* Hace que el contenedor sea un contenedor flexible */
+    flex-direction: column; /* Establece la dirección principal como columna */
+    align-items: center; /* Alinea los elementos horizontalmente en el centro del contenedor */
+    gap: var(--medium); /* Añade espacio entre los elementos dentro del contenedor */
+}
+/* Estilo para columnas */
+.column{ 
+    display: flex;/* Hace que el contenedor sea un contenedor flexible */
+    flex-direction: column; /* Establece la dirección principal como columna */
+    align-items: center;/* Alinea los elementos horizontalmente en el centro del contenedor */
+    gap: var(--small); /* Añade espacio entre los elementos dentro del contenedor */
+}
+
+/* Estilo para párrafos, títulos y subtítulos dentro de columnas */
+.column p, .column h1, .column h2{
+    text-align: center; /* Alinea el texto en el centro dentro de las columnas */
+}
+/* Estilo para imágenes */
+.img-width{
+    width: 350px; /*ANCHURA*/
+    height: 350px;/*altura*/
+}
+/* Media query para pantallas de tamaño 1024px+ */
+@media(min-width: 1024px) {
+    .btn, .btn:hover{
+        background-color: transparent; /* Cambia el color de fondo de los botones 
+                                            a transparente en pantallas grandes */
+    }
+
+    .column{
+        align-items: start; /* Alinea los elementos de las columnas
+                             a la izquierda en pantallas grandes */
+    }
+
+    .column p, .column h1, .column h2{
+        text-align: start; /* Alinea el texto a la izquierda dentro de las columnas en pantallas grandes */
+    }
+
+    .img-width{
+        width: 450px; /*anchura de la imagenes*/
+        height: 450px; /*altura de las imagenes*/
+    }
+}

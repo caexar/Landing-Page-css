@@ -1,0 +1,7 @@
+@import "components.css";
+@import "config.css";
+
+/* Style */
+@import "style-nav.css";
+@import "style-main.css";
+@import "style-footer.css";
